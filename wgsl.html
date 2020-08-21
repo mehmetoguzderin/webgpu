@@ -1222,7 +1222,7 @@ Possible extra rowspan handling
 	}
 </style>
   <meta content="Bikeshed version 7c63c139, updated Fri Jul 17 17:12:19 2020 -0700" name="generator">
-  <meta content="20d2474d780eba9e7d1bddff45966e7dc7eac140" name="document-revision">
+  <meta content="2817b8c68f05f765e7ed13325160f16281b79802" name="document-revision">
 <style>
 tr:nth-child(2n) {
   background-color: #f0f0f0;
@@ -1492,7 +1492,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">WebGPU Shading Language</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2020-08-09">9 August 2020</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2020-08-21">21 August 2020</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -5232,64 +5232,64 @@ TODO(dsinclair): Need gather operations
       <td>SPIR-V 
     <tbody>
      <tr>
-      <td>subgroup_is_first() -> bool
+      <td>subgroupIsFirst() -> bool
       <td>OpGroupNonUniformElect 
      <tr>
-      <td>subgroup_all(bool) -> bool
+      <td>subgroupAll(bool) -> bool
       <td>OpGroupNonUniformAll 
      <tr>
-      <td>subgroup_any(bool) -> bool
+      <td>subgroupAny(bool) -> bool
       <td>OpGroupNonUniformAny 
      <tr>
-      <td>subgroup_ballot(bool) -> vec4&lt;u32>
+      <td>subgroupBallot(bool) -> vec4&lt;u32>
       <td>OpGroupNonUniformBallot 
      <tr>
-      <td>subgroup_broadcast_first(Scalar) -> Scalar
+      <td>subgroupBroadcastFirst(Scalar) -> Scalar
       <td>OpGroupNonUniformBroadcastFirst 
      <tr>
-      <td>subgroup_add(Integral) -> Integral
+      <td>subgroupAdd(Integral) -> Integral
       <td>OpGroupNonUniformIAdd with Reduce 
      <tr>
-      <td>subgroup_add(Floating) -> Floating
+      <td>subgroupAdd(Floating) -> Floating
       <td>OpGroupNonUniformFAdd with Reduce 
      <tr>
-      <td>subgroup_mul(Integral) -> Integral
+      <td>subgroupMul(Integral) -> Integral
       <td>OpGroupNonUniformIMul with Reduce 
      <tr>
-      <td>subgroup_mul(Floating) -> Floating
+      <td>subgroupMul(Floating) -> Floating
       <td>OpGroupNonUniformFMul with Reduce 
      <tr>
-      <td>subgroup_min(Integral) -> Integral
+      <td>subgroupMin(Integral) -> Integral
       <td>OpGroupNonUniformUMin or OpGroupNonUniformSMin with Reduce 
      <tr>
-      <td>subgroup_min(Floating) -> Floating
+      <td>subgroupMin(Floating) -> Floating
       <td>OpGroupNonUniformFMin with Reduce 
      <tr>
-      <td>subgroup_max(Integral) -> Integral
+      <td>subgroupMax(Integral) -> Integral
       <td>OpGroupNonUniformUMax or OpGroupNonUniformSMax with Reduce 
      <tr>
-      <td>subgroup_max(Floating) -> Floating
+      <td>subgroupMax(Floating) -> Floating
       <td>OpGroupNonUniformFMax with Reduce 
      <tr>
-      <td>subgroup_and(Integral) -> Integral
+      <td>subgroupAnd(Integral) -> Integral
       <td>OpGroupNonUniformBitwiseAnd 
      <tr>
-      <td>subgroup_or(Integral) -> Integral
+      <td>subgroupOr(Integral) -> Integral
       <td>OpGroupNonUniformBitwiseOr 
      <tr>
-      <td>subgroup_xor(Integral) -> Integral
+      <td>subgroupXor(Integral) -> Integral
       <td>OpGroupNonUniformBitwiseXor 
      <tr>
-      <td>subgroup_prefix_add(Integral) -> Integral
+      <td>subgroupPrefixAdd(Integral) -> Integral
       <td>OpGroupNonUniformIAdd with ExclusiveScan 
      <tr>
-      <td>subgroup_prefix_add(Floating) -> Floating
+      <td>subgroupPrefixAdd(Floating) -> Floating
       <td>OpGroupNonUniformFAdd with ExclusiveScan 
      <tr>
-      <td>subgroup_prefix_mul(Integral) -> Integral
+      <td>subgroupPrefixMul(Integral) -> Integral
       <td>OpGroupNonUniformIMul with ExclusiveScan 
      <tr>
-      <td>subgroup_prefix_mul(Floating) -> Floating
+      <td>subgroupPrefixMul(Floating) -> Floating
       <td>OpGroupNonUniformFMul with ExclusiveScan 
    </table>
    <p class="note" role="note"><span>Note:</span> Subgroup functions exist if "subgroup-operations" is enabled in requestDevice.</p>
