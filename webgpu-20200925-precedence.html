@@ -1223,9 +1223,9 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 5f7b0e20, updated Tue Aug 18 15:46:28 2020 -0700" name="generator">
   <link href="https://gpuweb.github.io/gpuweb/wgsl.html" rel="canonical">
-  <meta content="d79a58555f0f4650d5901c6edcfb0c88201fe1e6" name="document-revision">
+  <meta content="2df71656aceb8bb7dded3fab0b9559df38f8efd0" name="document-revision">
 <style>
-tr:nth-child(2n) {
+tr:nth-child(2n):not(table.precedence tr) {
   background-color: #f0f0f0;
 }
 thead {
@@ -1234,6 +1234,10 @@ thead {
 }
 .nowrap {
   white-space:nowrap;
+}
+table.precedence th,
+table.precedence td {
+  text-align: left;
 }
 </style>
 <style>/* style-autolinks */
@@ -1493,7 +1497,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">WebGPU Shading Language</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2020-09-25">25 September 2020</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2020-09-26">26 September 2020</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -5981,29 +5985,29 @@ If you want <code>vec4&lt;f32></code> you must provide 4 float values in the con
    <table class="data">
     <thead>
      <tr>
-      <td>Precedence 
-      <td>Operators 
-      <td>Description 
-      <td>Associativity 
+      <th>Precedence 
+      <th>Operators 
+      <th>Description 
+      <th>Associativity 
     <tbody>
      <tr>
-      <td rowspan="1" style="text-align: left"><b>1 (highest)</b> 
+      <th rowspan="1">1 (highest) 
       <td> <code>(</code> <code>)</code> 
       <td> Grouping 
       <td rowspan="1"> Left-to-right 
      <tr>
-      <td colspan="1" rowspan="2" style="text-align: left"> <b>2</b> 
+      <th colspan="1" rowspan="2">2 
       <td> <code>!</code> 
       <td> Logical not 
-      <td colspan="1" rowspan="2" style="text-align: left"> Right-to-left 
+      <td colspan="1" rowspan="2"> Right-to-left 
      <tr>
       <td> <code>-</code> 
       <td> Unary negation 
      <tr>
-      <td colspan="1" rowspan="3" style="text-align: left"> <b>3</b> 
+      <th colspan="1" rowspan="3">3 
       <td> <code>*</code> 
       <td> Multiplication 
-      <td colspan="1" rowspan="18" style="text-align: left"> Left-to-right 
+      <td colspan="1" rowspan="18"> Left-to-right 
      <tr>
       <td> <code>/</code> 
       <td> Division 
@@ -6011,21 +6015,21 @@ If you want <code>vec4&lt;f32></code> you must provide 4 float values in the con
       <td> <code>%</code> 
       <td> Remainder 
      <tr>
-      <td colspan="1" rowspan="2" style="text-align: left"> <b>4</b> 
+      <th colspan="1" rowspan="2">4 
       <td> <code>+</code> 
       <td> Addition 
      <tr>
       <td> <code>-</code> 
       <td> Subtraction 
      <tr>
-      <td colspan="1" rowspan="2" style="text-align: left"> <b>5</b> 
+      <th colspan="1" rowspan="2">5 
       <td> <code>&lt;&lt;</code> 
       <td> Bitwise left shift 
      <tr>
       <td> <code>>></code> 
       <td> Bitwise right shift 
      <tr>
-      <td colspan="1" rowspan="4" style="text-align: left"> <b>6</b> 
+      <th colspan="1" rowspan="4">6 
       <td> <code>&lt;</code> 
       <td> Less than 
      <tr>
@@ -6038,30 +6042,30 @@ If you want <code>vec4&lt;f32></code> you must provide 4 float values in the con
       <td> <code>>=</code> 
       <td> Greater than or equal 
      <tr>
-      <td colspan="1" rowspan="2" style="text-align: left"> <b>7</b> 
+      <th colspan="1" rowspan="2">7 
       <td> <code>==</code> 
       <td> Equality 
      <tr>
       <td> <code>!=</code> 
       <td> Inequality 
      <tr>
-      <td colspan="1" rowspan="1" style="text-align: left"> <b>8</b> 
+      <th colspan="1" rowspan="1">8 
       <td> <code>&amp;</code> 
       <td> Bitwise and 
      <tr>
-      <td colspan="1" rowspan="1" style="text-align: left"> <b>9</b> 
+      <th colspan="1" rowspan="1">9 
       <td> <code>^</code> 
       <td> Bitwise xor 
      <tr>
-      <td colspan="1" rowspan="1" style="text-align: left"> <b>10</b> 
+      <th colspan="1" rowspan="1">10 
       <td> <code>|</code> 
       <td> Bitwise or 
      <tr>
-      <td colspan="1" rowspan="1" style="text-align: left"> <b>11</b> 
+      <th colspan="1" rowspan="1">11 
       <td> <code>&amp;&amp;</code> 
       <td> Logical and 
      <tr>
-      <td colspan="1" rowspan="1" style="text-align: left"> <b>12 (lowest)</b> 
+      <th colspan="1" rowspan="1">12 (lowest) 
       <td> <code>||</code> 
       <td> Logical or 
    </table>
