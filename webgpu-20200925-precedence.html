@@ -1223,7 +1223,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 5f7b0e20, updated Tue Aug 18 15:46:28 2020 -0700" name="generator">
   <link href="https://gpuweb.github.io/gpuweb/wgsl.html" rel="canonical">
-  <meta content="f4a9996742a330b54b712d43581ec0682c433306" name="document-revision">
+  <meta content="8c57e9478600b6aa4e3bfa129d619f3a6cddb1f2" name="document-revision">
 <style>
 tr:nth-child(2n) td:not([rowspan]) {
   background-color: #f0f0f0;
@@ -1235,11 +1235,23 @@ thead {
 .nowrap {
   white-space:nowrap;
 }
-table.precedence th,
-table.precedence th[rowspan],
-table.precedence td,
-table.precedence td[rowspan] {
+table.precedence tbody tr th[rowspan] {
+  border-right: 1px solid black;
+}
+table.precedence tbody tr td[rowspan] {
+  border-left: 1px solid black;
+}
+table.precedence tbody tr th,
+table.precedence tbody tr th[rowspan],
+table.precedence tbody tr td,
+table.precedence tbody tr td[rowspan] {
   text-align: left;
+}
+table.precedence tbody tr th[rowspan],
+table.precedence tbody tr th + td,
+table.precedence tbody tr th + td + td,
+table.precedence tbody tr td[rowspan] {
+  border-top: 1px solid black;
 }
 </style>
 <style>/* style-autolinks */
@@ -5984,7 +5996,7 @@ types you must use the cast syntax to do it.
 shorten vector declarations based on the type or number of elements provided.
 If you want <code>vec4&lt;f32></code> you must provide 4 float values in the constructor.</p>
    <h3 class="heading settled" data-level="17.3" id="precedence"><span class="secno">17.3. </span><span class="content">Precedence</span><a class="self-link" href="#precedence"></a></h3>
-   <table class="precedence data">
+   <table class="data precedence">
     <thead>
      <tr>
       <th>Precedence 
