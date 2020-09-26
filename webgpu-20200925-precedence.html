@@ -1223,9 +1223,9 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 5f7b0e20, updated Tue Aug 18 15:46:28 2020 -0700" name="generator">
   <link href="https://gpuweb.github.io/gpuweb/wgsl.html" rel="canonical">
-  <meta content="2df71656aceb8bb7dded3fab0b9559df38f8efd0" name="document-revision">
+  <meta content="f4a9996742a330b54b712d43581ec0682c433306" name="document-revision">
 <style>
-tr:nth-child(2n):not(table.precedence tr) {
+tr:nth-child(2n) td:not([rowspan]) {
   background-color: #f0f0f0;
 }
 thead {
@@ -1236,11 +1236,10 @@ thead {
   white-space:nowrap;
 }
 table.precedence th,
-table.precedence th[colspan],
+table.precedence th[rowspan],
 table.precedence td,
-table.precedence td[colspan] {
+table.precedence td[rowspan] {
   text-align: left;
-  border-right: 0;
 }
 </style>
 <style>/* style-autolinks */
