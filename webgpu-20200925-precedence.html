@@ -1323,7 +1323,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version f9f60c8f, updated Fri Sep 25 16:39:03 2020 -0700" name="generator">
   <link href="https://gpuweb.github.io/gpuweb/wgsl.html" rel="canonical">
-  <meta content="3649adf638f2e1f2dea3200078e9554d6a3a962b" name="document-revision">
+  <meta content="e131072a54f6cb8b543873066e472f0563a5a154" name="document-revision">
 <style>
 tr:nth-child(2n) td:not([rowspan]) {
   background-color: #f0f0f0;
@@ -1907,7 +1907,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">WebGPU Shading Language</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2020-10-13">13 October 2020</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2020-10-19">19 October 2020</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -6409,7 +6409,7 @@ If you want <code>vec4&lt;f32></code> you must provide 4 float values in the con
       <th colspan="1" rowspan="3">2 
       <td> <code>!</code> 
       <td> Logical not 
-      <td colspan="1" rowspan="3"> Right-to-left 
+      <td colspan="1" rowspan="3"> Nonassociative 
      <tr>
       <td> <code>~</code> 
       <td> Bitwise not 
@@ -6420,7 +6420,7 @@ If you want <code>vec4&lt;f32></code> you must provide 4 float values in the con
       <th colspan="1" rowspan="3">3 
       <td> <code>*</code> 
       <td> Multiplication 
-      <td colspan="1" rowspan="18"> Left-to-right 
+      <td colspan="1" rowspan="10"> Left-to-right 
      <tr>
       <td> <code>/</code> 
       <td> Division 
@@ -6442,9 +6442,22 @@ If you want <code>vec4&lt;f32></code> you must provide 4 float values in the con
       <td> <code>>></code> 
       <td> Bitwise right shift 
      <tr>
-      <th colspan="1" rowspan="4">6 
+      <th colspan="1" rowspan="1">6 
+      <td> <code>&amp;</code> 
+      <td> Bitwise and 
+     <tr>
+      <th colspan="1" rowspan="1">7 
+      <td> <code>^</code> 
+      <td> Bitwise xor 
+     <tr>
+      <th colspan="1" rowspan="1">8 
+      <td> <code>|</code> 
+      <td> Bitwise or 
+     <tr>
+      <th colspan="1" rowspan="4">9 
       <td> <code>&lt;</code> 
       <td> Less than 
+      <td colspan="1" rowspan="6"> Require parentheses 
      <tr>
       <td> <code>&lt;=</code> 
       <td> Less than or equal 
@@ -6455,28 +6468,17 @@ If you want <code>vec4&lt;f32></code> you must provide 4 float values in the con
       <td> <code>>=</code> 
       <td> Greater than or equal 
      <tr>
-      <th colspan="1" rowspan="2">7 
+      <th colspan="1" rowspan="2">10 
       <td> <code>==</code> 
       <td> Equality 
      <tr>
       <td> <code>!=</code> 
       <td> Inequality 
      <tr>
-      <th colspan="1" rowspan="1">8 
-      <td> <code>&amp;</code> 
-      <td> Bitwise and 
-     <tr>
-      <th colspan="1" rowspan="1">9 
-      <td> <code>^</code> 
-      <td> Bitwise xor 
-     <tr>
-      <th colspan="1" rowspan="1">10 
-      <td> <code>|</code> 
-      <td> Bitwise or 
-     <tr>
       <th colspan="1" rowspan="1">11 
       <td> <code>&amp;&amp;</code> 
       <td> Logical and 
+      <td colspan="1" rowspan="2"> Left-to-right 
      <tr>
       <th colspan="1" rowspan="1">12 (lowest) 
       <td> <code>||</code> 
